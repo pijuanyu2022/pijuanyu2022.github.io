@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Techs on Pijuan YU</title>
-    <link>https://pijuanyu.me/techs/</link>
-    <description>Recent content in Techs on Pijuan YU</description>
+    <title>Designs on Pijuan YU</title>
+    <link>https://pijuanyu.me/designs/</link>
+    <description>Recent content in Designs on Pijuan YU</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Pijuan Yu</copyright>
     
-	<atom:link href="https://pijuanyu.me/techs/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://pijuanyu.me/designs/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
