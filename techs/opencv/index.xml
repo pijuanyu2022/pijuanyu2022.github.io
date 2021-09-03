@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OpenCV on Pijuan Yu</title>
+    <link>https://pijuanyu.me/techs/opencv/</link>
+    <description>Recent content in OpenCV on Pijuan Yu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Pijuan Yu</copyright>
+    <lastBuildDate>Thu, 01 Jul 2021 07:00:09 +0200</lastBuildDate>
+    
+	<atom:link href="https://pijuanyu.me/techs/opencv/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Collaborative Manipulation - In Progress</title>
+      <link>https://pijuanyu.me/portfolio/collobrate-manipulation/</link>
+      <pubDate>Thu, 01 Jul 2021 07:00:09 +0200</pubDate>
+      
+      <guid>https://pijuanyu.me/portfolio/collobrate-manipulation/</guid>
+      <description>The purpose of this project is to do the navigation, SLAM, and track an apriltag for an omnidirectional robot by using one T265 tracking camera (above). This camera will be undistorted to get a disparity map, 3D point clouds, and laser scan. Then I will use this camera to get a 2D map and avoid the obstacle.
+Your browser doesn&#39;t support embedded videos, but don&#39;t worry, you can download it and watch it with your favorite video player!</description>
+    </item>
+    
+  </channel>
+</rss>
