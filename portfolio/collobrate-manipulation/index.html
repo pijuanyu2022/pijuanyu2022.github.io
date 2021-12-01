@@ -30,7 +30,7 @@
 <meta itemprop="description" content="Web presence for mountain and travel guide">
 <meta itemprop="datePublished" content="2021-07-01T07:00:09&#43;02:00" />
 <meta itemprop="dateModified" content="2021-07-01T07:00:09&#43;02:00" />
-<meta itemprop="wordCount" content="268">
+<meta itemprop="wordCount" content="365">
 
 
 
@@ -45,7 +45,7 @@
   <div class="intro">
     <div class="logo-container">
       <a href="/">
-        <img src='https://pijuanyu.me/images/pijuan.png' alt="Profile Youbot Manipulation" class="rounded-logo">
+        <img src='https://pijuanyu.me/images/pijuan.png' alt="Profile CONTACT" class="rounded-logo">
       </a>
     </div>
     <h2>Hi, I'm Pijuan 👋</h2>
@@ -226,17 +226,29 @@
 
 <img title="Collaborative Manipulation - In Progress" alt="Collaborative Manipulation - In Progress" src="/portfolio/images/t265.jpg" />
 
-<p>The purpose of this project is to do the navigation, SLAM, and track an apriltag for an omnidirectional robot by using one T265 tracking camera (above). This camera will be undistorted to get a disparity map, 3D point clouds, and laser scan. Then I will use this camera to get a 2D map and avoid the obstacle.</p>
+<p>The purpose of this project is to do the navigation, SLAM, and track an apriltag for an omnidirectional robot by using one T265 tracking camera (above). This camera will be undistorted to get a disparity map, 3D point clouds, and laser scan. Then I will use this camera to get a 2D map and use ROS Navigation stack package to do the navigation. Finally, I will do the formation control to control a group of three omnidirectional robots.</p>
+<h2 id="formation-control">Formation control</h2>
+<p>This is a formation control demo. I used a virtual structure controller to control a group of three omnidirectional robots. These three robots can simultaneously translation and rotation around a point.</p>
+<video controls preload="auto" width="100%"  playsinline class="html-video">
+    <source src="/portfolio/collobrate-manipulation/formation%20demo%20rviz.mp4" type="video/mp4">
+  <span>Your browser doesn't support embedded videos, but don't worry, you can <a href="/portfolio/collobrate-manipulation/formation%20demo%20rviz.mp4">download it</a> and watch it with your favorite video player!</span>
+</video>
+<video controls preload="auto" width="100%"  playsinline class="html-video">
+    <source src="/portfolio/collobrate-manipulation/formation%20demo.mp4" type="video/mp4">
+  <span>Your browser doesn't support embedded videos, but don't worry, you can <a href="/portfolio/collobrate-manipulation/formation%20demo.mp4">download it</a> and watch it with your favorite video player!</span>
+</video>
+<h2 id="apriltag-detection">Apriltag detection</h2>
+<p>I have already successfully installed the T265 camera in the computer which is embedded in the omnidirectional robot. The camera can recognize and track the apriltag from its fisheye camera, get the position of itself and obtain the distance between apriltag and camera (watch the video above).</p>
 <video controls preload="auto" width="100%"  playsinline class="html-video">
     <source src="/portfolio/collobrate-manipulation/apriltag%20track.mp4" type="video/mp4">
   <span>Your browser doesn't support embedded videos, but don't worry, you can <a href="/portfolio/collobrate-manipulation/apriltag%20track.mp4">download it</a> and watch it with your favorite video player!</span>
 </video>
-<p>At present, I have already successfully installed the T265 camera in the computer which is embedded in the omnidirectional robot. The camera can recognize and track the apriltag from its fisheye camera, get the position of itself and obtain the distance between apriltag and camera (watch the video above).</p>
+<h2 id="navigation">Navigation</h2>
+<p>I also obtain the disparity map and 3D point clouds by using some OpenCV functions and ROS packages. In the video above, the left window shows the original fisheye camera. The right window shows the disparity map which is created based on the undistorted stereo camera. The 3D point clouds are shown in the middle window. These point clouds are created based on the disparity map. They can generate a 3D image that can be used for SLAM.</p>
 <video controls preload="auto" width="100%"  playsinline class="html-video">
     <source src="/portfolio/collobrate-manipulation/3d%20point%20cloud.mp4" type="video/mp4">
   <span>Your browser doesn't support embedded videos, but don't worry, you can <a href="/portfolio/collobrate-manipulation/3d%20point%20cloud.mp4">download it</a> and watch it with your favorite video player!</span>
 </video>
-<p>I also obtain the disparity map and 3D point clouds by using some OpenCV functions and ROS packages. In the video above, the left window shows the original fisheye camera. The right window shows the disparity map which is created based on the undistorted stereo camera. The 3D point clouds are shown in the middle window. These point clouds are created based on the disparity map. They can generate a 3D image that can be used for SLAM.</p>
 <video controls preload="auto" width="100%"  playsinline class="html-video">
     <source src="/portfolio/collobrate-manipulation/costmap.mp4" type="video/mp4">
   <span>Your browser doesn't support embedded videos, but don't worry, you can <a href="/portfolio/collobrate-manipulation/costmap.mp4">download it</a> and watch it with your favorite video player!</span>
