@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>PORTFOLIO on Pijuan Yu</title>
-    <link>https://pijuanyu.me/portfolio/</link>
-    <description>Recent content in PORTFOLIO on Pijuan Yu</description>
+    <title>HOME on Pijuan Yu</title>
+    <link>https://pijuanyu.me/</link>
+    <description>Recent content in HOME on Pijuan Yu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Pijuan Yu</copyright>
     <lastBuildDate>Thu, 01 Jul 2021 07:00:09 +0200</lastBuildDate>
     
-	<atom:link href="https://pijuanyu.me/portfolio/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://pijuanyu.me/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
