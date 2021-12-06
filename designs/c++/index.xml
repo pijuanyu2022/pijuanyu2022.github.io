@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C&#43;&#43; on Pijuan Yu</title>
+    <link>https://pijuanyu.me/designs/c&#43;&#43;/</link>
+    <description>Recent content in C&#43;&#43; on Pijuan Yu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Pijuan Yu</copyright>
+    <lastBuildDate>Thu, 01 Jul 2021 07:00:09 +0200</lastBuildDate>
+    
+	<atom:link href="https://pijuanyu.me/designs/c++/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Collaborative Manipulation - In Progress</title>
+      <link>https://pijuanyu.me/portfolio/collobrate-manipulation/</link>
+      <pubDate>Thu, 01 Jul 2021 07:00:09 +0200</pubDate>
+      
+      <guid>https://pijuanyu.me/portfolio/collobrate-manipulation/</guid>
+      <description>The purpose of this project is to do the navigation, SLAM, and track an apriltag for an omnidirectional robot by using one T265 tracking camera (above). This camera will be undistorted to get a disparity map, 3D point clouds, and laser scan. Then I will use this camera to get a 2D map and use ROS Navigation stack package to do the navigation. Finally, I will do the formation control to control a group of three omnidirectional robots.</description>
+    </item>
+    
+  </channel>
+</rss>
