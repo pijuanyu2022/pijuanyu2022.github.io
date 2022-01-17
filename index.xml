@@ -13,12 +13,13 @@
     
     
     <item>
-      <title>Collaborative Manipulation - In Progress</title>
+      <title>Collaborative Manipulation</title>
       <link>https://pijuanyu.me/portfolio/collobrate-manipulation/</link>
       <pubDate>Thu, 01 Jul 2021 07:00:09 +0200</pubDate>
       
       <guid>https://pijuanyu.me/portfolio/collobrate-manipulation/</guid>
-      <description>The purpose of this project is to do the navigation, SLAM, and track an apriltag for an omnidirectional robot by using one T265 tracking camera (above). This camera will be undistorted to get a disparity map, 3D point clouds, and laser scan. Then I will use this camera to get a 2D map and use ROS Navigation stack package to do the navigation. Finally, I will do the formation control to control a group of three omnidirectional robots.</description>
+      <description>The final goal of this project is to control a group of three omnidirectional robots to move some heavy objects together. There are two parts to this robot. The top half part of this robot is a delta robot, which is used to withstand some heavy objects. The bottom half part of this robot is an omnidirectional mobile robot with four mecanum wheels.
+I focus on the bottom part of the robot.</description>
     </item>
     
     <item>
@@ -78,84 +79,12 @@ I use MATLAB to create an animation csv file and then input this file into Coppe
     </item>
     
     <item>
-      <title>Getting started</title>
-      <link>https://pijuanyu.me/contact/getting-started/</link>
-      <pubDate>Fri, 03 May 2019 09:37:55 +0200</pubDate>
-      
-      <guid>https://pijuanyu.me/contact/getting-started/</guid>
-      <description>&lt;p&gt;Here are some details to help you getting started with this theme.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Portfolio Definition</title>
-      <link>https://pijuanyu.me/contact/portfolio-definition/</link>
-      <pubDate>Thu, 02 May 2019 19:49:05 +0200</pubDate>
-      
-      <guid>https://pijuanyu.me/contact/portfolio-definition/</guid>
-      <description>&lt;p&gt;Here are some details about the portfolio settings.&lt;/p&gt;
-&lt;figure&gt;
-    &lt;img src=&#34;https://pijuanyu.me/post/images/portfolio-example.png&#34;
-         alt=&#34;Example of Portfolio page&#34;/&gt; &lt;figcaption&gt;
-            &lt;p&gt;Example of Portfolio page&lt;/p&gt;
-        &lt;/figcaption&gt;
-&lt;/figure&gt;</description>
-    </item>
-    
-    <item>
-      <title>Archetypes management</title>
-      <link>https://pijuanyu.me/contact/archetypes/</link>
-      <pubDate>Thu, 02 May 2019 19:25:30 +0200</pubDate>
-      
-      <guid>https://pijuanyu.me/contact/archetypes/</guid>
-      <description>&lt;p&gt;The archetypes are defined in the &lt;code&gt;archetypes&lt;/code&gt; folder, for both post and portfolio.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Manage Your Menu</title>
-      <link>https://pijuanyu.me/contact/manage-your-menu/</link>
-      <pubDate>Thu, 02 May 2019 19:06:29 +0200</pubDate>
-      
-      <guid>https://pijuanyu.me/contact/manage-your-menu/</guid>
-      <description>&lt;p&gt;Menu in the sidebar can be defined within the &lt;code&gt;config.toml&lt;/code&gt; or directly in the files.
-I prefer the config file approach, as this menu is pretty simple.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>Finite Element Analysis Projects</title>
       <link>https://pijuanyu.me/portfolio/finite-element-analysis/</link>
       <pubDate>Tue, 30 Apr 2019 07:00:09 +0200</pubDate>
       
       <guid>https://pijuanyu.me/portfolio/finite-element-analysis/</guid>
       <description>Roller Coaster Support Structure Design The objective of this project is to design and test the structure of the support of a roller coaster track under various loading conditions. We implement a truss structure as the support of the track and test the structure in three different scenarios. We then compare the FEA results from Ansys with analytical results of buckling load and yield strength of the material to decide whether the design is feasible.</description>
-    </item>
-    
-    <item>
-      <title>Shortcodes</title>
-      <link>https://pijuanyu.me/contact/shortcodes/</link>
-      <pubDate>Mon, 29 Apr 2019 16:18:12 +0100</pubDate>
-      
-      <guid>https://pijuanyu.me/contact/shortcodes/</guid>
-      <description>&lt;p&gt;Introduction of the shortcodes defined in the personal-web theme.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Config File</title>
-      <link>https://pijuanyu.me/contact/config-file/</link>
-      <pubDate>Sat, 20 Apr 2019 16:18:12 +0100</pubDate>
-      
-      <guid>https://pijuanyu.me/contact/config-file/</guid>
-      <description>&lt;p&gt;Here is the basic config file used for personal-web.&lt;/p&gt;
-&lt;p&gt;You can use it as a base for your website.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Open Graph image</title>
-      <link>https://pijuanyu.me/contact/define-specific-og-image/</link>
-      <pubDate>Sat, 20 Apr 2019 11:14:59 +0200</pubDate>
-      
-      <guid>https://pijuanyu.me/contact/define-specific-og-image/</guid>
-      <description>Within any page, you can add in the FrontMatter a images array that will be used to define a specific Open Graph image.
-For example, see content/_index.md page:</description>
     </item>
     
   </channel>
