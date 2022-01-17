@@ -13,12 +13,13 @@
     
     
     <item>
-      <title>Collaborative Manipulation - In Progress</title>
+      <title>Collaborative Manipulation</title>
       <link>https://pijuanyu.me/portfolio/collobrate-manipulation/</link>
       <pubDate>Thu, 01 Jul 2021 07:00:09 +0200</pubDate>
       
       <guid>https://pijuanyu.me/portfolio/collobrate-manipulation/</guid>
-      <description>The purpose of this project is to do the navigation, SLAM, and track an apriltag for an omnidirectional robot by using one T265 tracking camera (above). This camera will be undistorted to get a disparity map, 3D point clouds, and laser scan. Then I will use this camera to get a 2D map and use ROS Navigation stack package to do the navigation. Finally, I will do the formation control to control a group of three omnidirectional robots.</description>
+      <description>The final goal of this project is to control a group of three omnidirectional robots to move some heavy objects together. There are two parts to this robot. The top half part of this robot is a delta robot, which is used to withstand some heavy objects. The bottom half part of this robot is an omnidirectional mobile robot with four mecanum wheels.
+I focus on the bottom part of the robot.</description>
     </item>
     
   </channel>
