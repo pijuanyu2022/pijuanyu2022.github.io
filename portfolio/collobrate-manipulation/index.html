@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang='en'><head>
-  <title>Collaborative Manipulation - In Progress - Pijuan Yu</title>
+  <title>Collaborative Manipulation - Pijuan Yu</title>
   <link rel='canonical' href='https://pijuanyu.me/portfolio/collobrate-manipulation/' />
   <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -19,18 +19,18 @@
 <link rel="stylesheet" href="https://pijuanyu.me/sass/style.min.cf2eeff825d4dbc673ce0b82d270d9fc32d34973a7d5cd079e0dcf4fe3e77515.css" integrity="sha256-zy7v&#43;CXU28ZzzguC0nDZ/DLTSXOn1c0Hng3PT&#43;PndRU=" media="screen">
 <link rel="stylesheet" href="https://pijuanyu.me/syntax.min.css" integrity="" media="screen">
 
-  <meta property="og:title" content="Collaborative Manipulation - In Progress" />
+  <meta property="og:title" content="Collaborative Manipulation" />
 <meta property="og:description" content="Web presence for mountain and travel guide" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://pijuanyu.me/portfolio/collobrate-manipulation/" />
 <meta property="article:published_time" content="2021-07-01T07:00:09+02:00" />
 <meta property="article:modified_time" content="2021-07-01T07:00:09+02:00" />
 
-  <meta itemprop="name" content="Collaborative Manipulation - In Progress">
+  <meta itemprop="name" content="Collaborative Manipulation">
 <meta itemprop="description" content="Web presence for mountain and travel guide">
 <meta itemprop="datePublished" content="2021-07-01T07:00:09&#43;02:00" />
 <meta itemprop="dateModified" content="2021-07-01T07:00:09&#43;02:00" />
-<meta itemprop="wordCount" content="365">
+<meta itemprop="wordCount" content="800">
 
 
 
@@ -45,7 +45,7 @@
   <div class="intro">
     <div class="logo-container">
       <a href="/">
-        <img src='https://pijuanyu.me/images/pijuan.png' alt="Profile Getting started" class="rounded-logo">
+        <img src='https://pijuanyu.me/images/pijuan.png' alt="Profile Finite Element Analysis Projects" class="rounded-logo">
       </a>
     </div>
     <h2>Hi, I'm Pijuan 👋</h2>
@@ -137,7 +137,7 @@
 
 
 <span  class="active">
-  <a href="https://pijuanyu.me/portfolio/collobrate-manipulation/">Collaborative Manipulation - In Progress</a>
+  <a href="https://pijuanyu.me/portfolio/collobrate-manipulation/">Collaborative Manipulation</a>
   
 </span>
 
@@ -146,7 +146,7 @@
     
     <main id="content" class="portfolio">
 
-<h1>Collaborative Manipulation - In Progress</h1>
+<h1>Collaborative Manipulation</h1>
 <div class="tags">
   
   <div class="designs portfolio-tags">
@@ -224,10 +224,47 @@
 </div>
 </div>
 
-<img title="Collaborative Manipulation - In Progress" alt="Collaborative Manipulation - In Progress" src="/portfolio/images/omnid.jpg" />
+<img title="Collaborative Manipulation" alt="Collaborative Manipulation" src="/portfolio/images/omnid.jpg" />
 
-<p>The purpose of this project is to do the navigation, SLAM, and track an apriltag for an omnidirectional robot by using one T265 tracking camera (above). This camera will be undistorted to get a disparity map, 3D point clouds, and laser scan. Then I will use this camera to get a 2D map and use ROS Navigation stack package to do the navigation. Finally, I will do the formation control to control a group of three omnidirectional robots.</p>
-<h2 id="formation-control">Formation control</h2>
+<p>The final goal of this project is to control a group of three omnidirectional robots to move some heavy objects together. There are two parts to this robot. The top half part of this robot is a delta robot, which is used to withstand some heavy objects. The bottom half part of this robot is an omnidirectional mobile robot with four mecanum wheels.</p>
+<p>I focus on the bottom part of the robot. And my project can also be divided into two parts.
+The first part is related to computer vision and navigation. The second part is about formation control to control a group of three robots. I use C++ to develop the first part and python for the second part.</p>
+<h2 id="demo">Demo</h2>
+<video controls preload="auto" width="100%"  playsinline class="html-video">
+    <source src="/portfolio/collobrate-manipulation/formation_demo.mp4" type="video/mp4">
+  <span>Your browser doesn't support embedded videos, but don't worry, you can <a href="/portfolio/collobrate-manipulation/formation_demo.mp4">download it</a> and watch it with your favorite video player!</span>
+</video>
+<video controls preload="auto" width="100%"  playsinline class="html-video">
+    <source src="/portfolio/collobrate-manipulation/SLAM_demo.mp4" type="video/mp4">
+  <span>Your browser doesn't support embedded videos, but don't worry, you can <a href="/portfolio/collobrate-manipulation/SLAM_demo.mp4">download it</a> and watch it with your favorite video player!</span>
+</video>
+<h2 id="part1">Part1</h2>
+<p>For the first part, the purpose of the first part is to use the Realsense T265 camera to do visual SLAM and navigation for one robot. This device is fascinating. Because it can provide an odometry frame and camera pose frame. That means we can get the location of this camera. Besides, it has a stereo fisheye camera. Compare with the normal camera, it has a wide-angle of view. And that will be much useful for detecting obstacles.</p>
+<h3 id="step1-apriltag-detection">Step1: Apriltag detection</h3>
+<p>The first step is to connect T265 camera with the robot and test it with some April tags. I install this camera on the robot and successfully use it to track some apriltags. I can get the ID, position and orientation of the apriltag. And there is a realsense_ros package. When I launch the camera, I can get some rostopics of T265 camera.</p>
+<video controls preload="auto" width="100%"  playsinline class="html-video">
+    <source src="/portfolio/collobrate-manipulation/apriltag%20track.mp4" type="video/mp4">
+  <span>Your browser doesn't support embedded videos, but don't worry, you can <a href="/portfolio/collobrate-manipulation/apriltag%20track.mp4">download it</a> and watch it with your favorite video player!</span>
+</video>
+<h3 id="step2-undistort-the-stereo-fisheye-camera">Step2: Undistort the stereo fisheye camera</h3>
+<p>The second step is to undistort the stereo fisheye camera. If I need to use the stereo fisheye camera to detect some obstacles or build 3D map, I have to undistort it. I firstly do the camera calibration with OpenCV.  I use ROS to subscribe to two fisheye images. Then I use approixamtetime approach to synchronize the left and right image messages. After that, I use the function from OpenCV to undistort the fisheye images and publish the undistorted image.</p>
+<h3 id="step3-obtain-disparity-map-and-3d-point-cloud">Step3: Obtain disparity map and 3D point cloud</h3>
+<p>The third step is to use undistorted images to calculate the disparity map and 3D point cloud. The disparity map is the pixel difference between a pair of stereo images. I also use the function of the OpenCV package to compute the disparity map. And according to the dispariy map, I calculate the 3D point cloud based on the functions.</p>
+<video controls preload="auto" width="100%"  playsinline class="html-video">
+    <source src="/portfolio/collobrate-manipulation/3d%20point%20cloud.mp4" type="video/mp4">
+  <span>Your browser doesn't support embedded videos, but don't worry, you can <a href="/portfolio/collobrate-manipulation/3d%20point%20cloud.mp4">download it</a> and watch it with your favorite video player!</span>
+</video>
+<h3 id="step4-slam-and-navigation">Step4: SLAM and navigation</h3>
+<p>The fourth step is to use octomap ros package to build 3D occupancy map and 2d projected map based on the 3D point cloud. And then when I successfully get the 2D map, I can start to do the 2D navigation by using ROS Navigation Stack. For the navigation, I can directly locate the T265 camera. I have 3D Pointcloud. So, I use the move_base package and DWA local planner to complete the navigation. This is what I have done in the first part.</p>
+<video controls preload="auto" width="100%"  playsinline class="html-video">
+    <source src="/portfolio/collobrate-manipulation/filter.mp4" type="video/mp4">
+  <span>Your browser doesn't support embedded videos, but don't worry, you can <a href="/portfolio/collobrate-manipulation/filter.mp4">download it</a> and watch it with your favorite video player!</span>
+</video>
+<h2 id="part2">Part2</h2>
+<h3 id="formation-control">Formation control</h3>
+<p>I develop two controllers, which are the leader-follower controller and virtual structure controller.</p>
+<p>For the leader-follower controller, I choose one robot as a leader and the other two robots as followers. When I control the first robot, another two robots will follower the leader. The theory is that I use a dynamic model to connect these three robots based on the position and orientation of the three robots.</p>
+<p>For the virtual structure controller, I choose a virtual point. And then the three robots will rotate and translate around this virtual point. That means I can consider these three robots as one robot. They will rotate and move at the same time.</p>
 <p>This is a formation control demo. I used a virtual structure controller to control a group of three omnidirectional robots. These three robots can simultaneously translation and rotation around a point.</p>
 <video controls preload="auto" width="100%"  playsinline class="html-video">
     <source src="/portfolio/collobrate-manipulation/formation%20demo%20rviz.mp4" type="video/mp4">
@@ -236,26 +273,6 @@
 <video controls preload="auto" width="100%"  playsinline class="html-video">
     <source src="/portfolio/collobrate-manipulation/formation%20demo.mp4" type="video/mp4">
   <span>Your browser doesn't support embedded videos, but don't worry, you can <a href="/portfolio/collobrate-manipulation/formation%20demo.mp4">download it</a> and watch it with your favorite video player!</span>
-</video>
-<h2 id="apriltag-detection">Apriltag detection</h2>
-<p>I have already successfully installed the T265 camera in the computer which is embedded in the omnidirectional robot. The camera can recognize and track the apriltag from its fisheye camera, get the position of itself and obtain the distance between apriltag and camera (watch the video above).</p>
-<video controls preload="auto" width="100%"  playsinline class="html-video">
-    <source src="/portfolio/collobrate-manipulation/apriltag%20track.mp4" type="video/mp4">
-  <span>Your browser doesn't support embedded videos, but don't worry, you can <a href="/portfolio/collobrate-manipulation/apriltag%20track.mp4">download it</a> and watch it with your favorite video player!</span>
-</video>
-<h2 id="navigation">Navigation</h2>
-<p>I also obtain the disparity map and 3D point clouds by using some OpenCV functions and ROS packages. In the video above, the left window shows the original fisheye camera. The right window shows the disparity map which is created based on the undistorted stereo camera. The 3D point clouds are shown in the middle window. These point clouds are created based on the disparity map. They can generate a 3D image that can be used for SLAM.</p>
-<video controls preload="auto" width="100%"  playsinline class="html-video">
-    <source src="/portfolio/collobrate-manipulation/3d%20point%20cloud.mp4" type="video/mp4">
-  <span>Your browser doesn't support embedded videos, but don't worry, you can <a href="/portfolio/collobrate-manipulation/3d%20point%20cloud.mp4">download it</a> and watch it with your favorite video player!</span>
-</video>
-<video controls preload="auto" width="100%"  playsinline class="html-video">
-    <source src="/portfolio/collobrate-manipulation/costmap.mp4" type="video/mp4">
-  <span>Your browser doesn't support embedded videos, but don't worry, you can <a href="/portfolio/collobrate-manipulation/costmap.mp4">download it</a> and watch it with your favorite video player!</span>
-</video>
-<video controls preload="auto" width="100%"  playsinline class="html-video">
-    <source src="/portfolio/collobrate-manipulation/filter.mp4" type="video/mp4">
-  <span>Your browser doesn't support embedded videos, but don't worry, you can <a href="/portfolio/collobrate-manipulation/filter.mp4">download it</a> and watch it with your favorite video player!</span>
 </video>
 
 
